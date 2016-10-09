@@ -18,7 +18,7 @@ public class BankIT {
 		
 		bank.depositAccount(carlos, 50.0f);
 		float accountAmount = carlos.getAccount().getAmount();
-		assertEquals(50.0f, 20.0f,floatTolerance);
+		assertEquals(50.0f, accountAmount,floatTolerance);
 		
 	}
 	
