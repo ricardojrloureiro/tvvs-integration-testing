@@ -27,4 +27,22 @@ public class Bank {
 	public void addClient(Client client) {
 		clients.add(client);
 	}
+	
+	public Client getClientByName(String name) {
+		for(int i=0;i<clients.size();i++) {
+			if(clients.get(i).getName() == name) {
+				return clients.get(i);
+			}
+		}
+		return null;
+	}
+
+	public int transfer(Client from, Client to, float amount) {
+		if(from.withdrawMoney(amount) != -1) {
+			to.depositMoney(amount);
+			return 0;
+		}
+		return -1;
+		
+	}
 }

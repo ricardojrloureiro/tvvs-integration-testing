@@ -2,9 +2,11 @@ package Bank.BankArtifact;
 
 public class Client {
 	private Account account;
+	private String name;
 	
-	public Client() {
+	public Client(String name) {
 		this.account = new Account();
+		this.name = name;
 	}
 	
 	public void depositMoney(float amount){
@@ -23,5 +25,9 @@ public class Client {
 		} else {
 			return -1;
 		}
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 }
