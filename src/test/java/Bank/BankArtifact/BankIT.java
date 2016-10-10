@@ -31,7 +31,7 @@ public class BankIT {
 		Client carlos = bank.getClientByName("Carlos");
 		bank.depositAccount(carlos, 50.0f);
 		float accountAmount = carlos.getAccount().getAmount();
-		assertEquals(50.0f, 30.0f,floatTolerance);
+		assertEquals(50.0f, accountAmount,floatTolerance);
 		
 	}
 	
